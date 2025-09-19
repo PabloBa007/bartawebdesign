@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kontakt – Pablo</title>
+  <meta name="description" content="Projektanfragen, Kooperationen, Fragen. Standort Sulzberg (Vorarlberg). Antwort i. d. R. < 24h." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">Über mich</a></li>
+      <li><a class="active" href="kontakt.html">Kontakt</a></li>
+      <li><a href="projekt.html">Projekte</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="kontakt-section">
+      <div class="contact-container">
+        <div class="contact-card">
+          <h1>Kontakt</h1>
+          <p class="tagline">Kurzer Draht, klare Angebote, verlässliche Timelines.</p>
+          <ul class="info-list">
+            <li class="info-item">
+              <span class="label">E-Mail:</span>
+              <a href="mailto:hello@deinedomain?subject=Projektanfrage">hello@deinedomain</a>
+              <button class="copy-btn" data-copy="hello@deinedomain" aria-label="E-Mail kopieren">📋</button>
+            </li>
+            <li class="info-item">
+              <span class="label">Telefon/WhatsApp:</span>
+              <a href="tel:+43deineNummer">+43 deineNummer</a>
+              <button class="copy-btn" data-copy="+43 deineNummer" aria-label="Telefon kopieren">📋</button>
+            </li>
+            <li class="info-item"><span class="label">Standort:</span> Sulzberg, Vorarlberg, AT</li>
+            <li class="info-item"><span class="label">Erreichbarkeit:</span> Mo–Fr 09:00–17:00 (CET/CEST)</li>
+          </ul>
+          <div class="cta-buttons">
+            <a class="btn primary" href="mailto:hello@deinedomain?subject=Projektanfrage">E-Mail senden</a>
+            <a class="btn secondary" href="tel:+43deineNummer">Anrufen</a>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com" target="_blank" rel="me noopener">🔗</a>
+            <a href="https://github.com" target="_blank" rel="me noopener">💻</a>
+            <a href="https://www.instagram.com" target="_blank" rel="me noopener">📷</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h2>vCard</h2>
+          <a class="btn secondary" href="pablo.vcf" download>Download vCard</a>
+          <img src="pablo-qr.png" alt="QR-Code zur vCard" class="qr" />
+        </div>
+      </div>
+      <div id="toast" class="toast" role="status" aria-live="polite">Kopiert ✓</div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.getAttribute('data-copy');
+        navigator.clipboard.writeText(text).then(() => {
+          const toast = document.getElementById('toast');
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 2000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

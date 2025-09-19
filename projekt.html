@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekte</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">Über mich</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a class="active" href="projekt.html">Projekte</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="projects-section">
+      <div class="projects-wrapper">
+        <header class="projects-header">
+          <h1>Projekte</h1>
+          <p class="subline">Eine Auswahl meiner Arbeiten, die Hintergrund &amp; Resultate hervorhebt.</p>
+        </header>
+        <div class="project-slider">
+          <button class="arrow prev" aria-label="Vorheriges Projekt">&#10094;</button>
+          <div class="project-cards">
+            <div class="project-card">
+              <img src="Bilder/Projeckt1.jpg" alt="Projekt 1" />
+              <h2>Projekt Eins</h2>
+              <p>Problem skizzieren, Lösung erläutern und das Ergebnis hervorheben.</p>
+            </div>
+            <div class="project-card">
+              <img src="Bilder/Projeckt2.jpg" alt="Projekt 2" />
+              <h2>Projekt Zwei</h2>
+              <p>Problem skizzieren, Lösung erläutern und das Ergebnis hervorheben.</p>
+            </div>
+            <div class="project-card">
+              <img src="Bilder/Projeckt3.jpg" alt="Projekt 3" />
+              <h2>Projekt Drei</h2>
+              <p>Problem skizzieren, Lösung erläutern und das Ergebnis hervorheben.</p>
+            </div>
+          </div>
+          <button class="arrow next" aria-label="Nächstes Projekt">&#10095;</button>
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+    let idx = 0;
+    function show(i){
+      cards.forEach((c, n) => c.classList.toggle('active', n === i));
+      dots.forEach((d, n) => d.classList.toggle('active', n === i));
+    }
+    prev.addEventListener('click', () => {
+      idx = (idx - 1 + cards.length) % cards.length;
+      show(idx);
+    });
+    next.addEventListener('click', () => {
+      idx = (idx + 1) % cards.length;
+      show(idx);
+    });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => {
+      idx = i;
+      show(idx);
+    }));
+    show(idx);
+  </script>
+</body>
+</html>

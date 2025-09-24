@@ -1,43 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine Seite</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webdesign & SEO in Vorarlberg – Barta Webdesign (Sulzberg)</title>
+  <meta name="description" content="Moderne, schnelle Webseiten für KMU. Kostenloser Figma-Entwurf vorab; wenn es nicht passt, keine Kosten. Umsetzung mit SEO & Performance.">
+  <link rel="canonical" href="https://bartawebdesign.at/">
+  <meta property="og:site_name" content="Barta Webdesign">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webdesign & SEO für KMU – Barta Webdesign (Sulzberg)">
+  <meta property="og:description" content="Moderne, schnelle Webseiten. Kostenloser Figma-Entwurf. SEO & Performance ab Tag 1.">
+  <meta property="og:url" content="https://bartawebdesign.at/">
+  <meta property="og:image" content="https://bartawebdesign.at/Bilder/social.png">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Webdesign & SEO für KMU – Barta Webdesign">
+  <meta name="twitter:description" content="Klare Struktur, schnelle Ladezeiten, bessere Sichtbarkeit.">
+  <meta name="twitter:image" content="https://bartawebdesign.at/Bilder/social.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="aboutme.html">Über mich</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="projekt.html">Projekte</a></li>
-    </ul>
-  </nav>
+<header class="site-header">
+  <div class="container navbar">
+    <div class="brand">Paolo Barta</div>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="ueber-mich.html">Über mich</a>
+      <a href="projekte.html">Projekte</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="formular.html">Anfrage</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section id="home" class="home">
-      <div class="split-container">
-        <div class="image-side">
-          <img src="Bilder/Paolo.jpg" alt="Website-Mockup" width="400" height="600" />
-        </div>
-        <div class="text-side">
-          <h1>Willkommen!</h1>
-          <p>
-            Hier kann ein kurzer Begrüßungstext stehen, der den Besucher
-            willkommen heißt oder eine Einführung in die Webseite gibt.
-          </p>
-          <div class="cta-buttons">
-            <a class="btn primary" href="kontakt.html">Kontakt aufnehmen</a>
-            <a class="btn secondary" href="projekt.html">Projekte ansehen</a>
-          </div>
-        </div>
+<main>
+  <section class="section">
+    <div class="container">
+      <picture>
+        <source srcset="Bilder/Bildrund.webp" type="image/webp">
+        <img class="portrait" src="Bilder/Bildrund.jpg" alt="Paolo Barta – Profilfoto"
+             width="170" height="170" decoding="async" fetchpriority="high">
+      </picture>
+      <h1 class="mt-4">Webdesign & SEO in Vorarlberg –<br>Barta Webdesign (Sulzberg)</h1>
+      <p class="lead">Moderne, schnelle Webseiten für KMU. Kostenloser Figma-Entwurf vorab; wenn es nicht passt, keine Kosten. Umsetzung mit SEO &amp; Performance.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="mt-6">Webdesign, das gefunden wird – und schnell lädt.</h2>
+      <p>Ich konzipiere und baue Webseiten für kleine Unternehmen – klar strukturiert, schnell und suchmaschinenfreundlich. Du erhältst vorab kostenlos einen Figma-Entwurf; gefällt er nicht, zahlst du 0 €. Passt er, setze ich ihn um und stelle die Seite online.</p>
+      <ul class="bullets">
+        <li><strong>Klarer Auftritt:</strong> sauberes Design, starke Typografie, mobile first.</li>
+        <li><strong>SEO ab Tag&nbsp;1:</strong> saubere Struktur, Meta-Daten, interne Links &amp; FAQ-Snippets.</li>
+        <li><strong>Messbar schnell:</strong> Bild-Optimierung, WebP/AVIF, schlanke Fonts, grüne Web Vitals.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container inline-links">
+      <h2 class="mt-6">Leistungen</h2>
+      <p>
+        <a href="projekte.html">Webdesign &amp; Relaunch</a> – 5–20 Seiten, passgenau für dein Geschäft. <br>
+        <a href="projekte.html">SEO-Setup</a> – Title/Description, H-Struktur, Local SEO, FAQ-Schema. <br>
+        <a href="projekte.html">Performance</a> – LCP/INP/CLS verbessern, Bilder &amp; Code schlank.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <h2 class="mt-6">Ablauf</h2>
+      <ol class="stack">
+        <li><strong>Briefing (E-Mail/WhatsApp)</strong> – Ziele, Inhalte, Budget &amp; Timing.</li>
+        <li><strong>Kostenloser Figma-Entwurf</strong> – wir bearbeiten den Entwurf, bis das Konzept sitzt (Zoom).</li>
+        <li><strong>Umsetzung</strong> – sauberes HTML/CSS/JS, SEO integriert.</li>
+        <li><strong>Launch</strong> – Hosting/Domain, Tracking &amp; Übergabe.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container faq">
+      <div class="faq-item">
+        <button class="faq-btn" type="button">Was kostet ein Projekt?</button>
+        <div class="faq-panel small">Typisch 2.000–10.000&nbsp;€, abhängig von Umfang &amp; Funktionen.</div>
       </div>
-    </section>
-  </main>
+      <div class="faq-item">
+        <button class="faq-btn" type="button">Relaunch statt Neubau?</button>
+        <div class="faq-panel small">Ja – ich modernisiere bestehende Seiten und sichere Inhalte &amp; Rankings.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container center">
+      <a class="btn primary" href="formular.html">Kostenlosen Figma-Entwurf anfordern</a>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container center small">
+      <em>„Webdesign für KMU – moderner, schneller Internetauftritt“</em>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <div>Paolo Barta</div>
+    <div class="small">
+      <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a> ·
+      <a href="mailto:paolo.barta2007@gmail.com">paolo.barta2007@gmail.com</a> · +43 677 623 09317
+    </div>
+  </div>
+</footer>
+
+<script defer>
+  document.querySelectorAll('.faq-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open'));
+  });
+</script>
 </body>
 </html>

@@ -1,126 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Webdesign & SEO in Vorarlberg – Barta Webdesign (Sulzberg)</title>
-  <meta name="description" content="Moderne, schnelle Webseiten für KMU. Kostenloser Figma-Entwurf vorab; wenn es nicht passt, keine Kosten. Umsetzung mit SEO & Performance.">
-  <link rel="canonical" href="https://bartawebdesign.at/">
-  <meta property="og:site_name" content="Barta Webdesign">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Webdesign & SEO in Vorarlberg | Barta Webdesign</title>
+  <meta name="description" content="Webseiten, die gut aussehen, schnell laden und gefunden werden. Barta Webdesign aus Vorarlberg: klare Texte, saubere Technik, einfache Zusammenarbeit. Jetzt kostenlosen Design-Entwurf sichern.">
+
+  <link rel="canonical" href="https://bartawebdesign.at/index.html">
+
+  <!-- Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Webdesign & SEO für KMU – Barta Webdesign (Sulzberg)">
-  <meta property="og:description" content="Moderne, schnelle Webseiten. Kostenloser Figma-Entwurf. SEO & Performance ab Tag 1.">
-  <meta property="og:url" content="https://bartawebdesign.at/">
+  <meta property="og:site_name" content="Barta Webdesign">
+  <meta property="og:title" content="Webdesign & SEO in Vorarlberg | Barta Webdesign">
+  <meta property="og:description" content="Moderne Websites mit klarer Struktur, guter Sichtbarkeit und schneller Ladezeit. Kostenlosen Design-Entwurf anfragen.">
+  <meta property="og:url" content="https://bartawebdesign.at/index.html">
   <meta property="og:image" content="https://bartawebdesign.at/Bilder/social.png">
-  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:locale" content="de_AT">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Webdesign & SEO für KMU – Barta Webdesign">
-  <meta name="twitter:description" content="Klare Struktur, schnelle Ladezeiten, bessere Sichtbarkeit.">
+  <meta name="twitter:title" content="Webdesign & SEO in Vorarlberg | Barta Webdesign">
+  <meta name="twitter:description" content="Webdesign, das verstanden wird – und bei Google gefunden wird.">
   <meta name="twitter:image" content="https://bartawebdesign.at/Bilder/social.png">
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Barta Webdesign","url":"https://bartawebdesign.at","logo":"https://bartawebdesign.at/Bilder/social.png","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"kontakt@bartawebdesign.at","areaServed":"AT"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Barta Webdesign","url":"https://bartawebdesign.at","inLanguage":"de-AT"}
+  </script>
+
+  <!-- ====== FAQ FIX (kein Eingriff in style.css) ====== -->
+  <style>
+    /* FAQ-Container immer zentriert in Seitenbreite */
+    .faq{
+      width: min(var(--max, 1100px), 92vw);
+      margin: 50px auto;
+    }
+    /* Eine Spalte – jedes FAQ-Item nimmt volle Breite */
+    .faq .faq-items{
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px;
+    }
+    /* Details-Elemente immer volle Containerbreite (geschlossen & offen) */
+    .faq .faq-items details,
+    .faq .faq-items details[open]{
+      grid-column: 1 / -1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      display: block !important;
+      box-sizing: border-box !important;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: var(--radius-lg, 22px);
+      background: var(--mint-100, #e8f7ee);
+      padding: 16px 20px;
+      transition: background .2s ease;
+    }
+    .faq .faq-items details:hover{ background: var(--mint-200, #d8f3e3); }
+
+    /* Summary als Titelzeile, volle Breite */
+    .faq .faq-items summary{
+      list-style: none; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--gray-800, #1e2a1f);
+      width: 100%;
+    }
+    .faq .faq-items summary::-webkit-details-marker{ display:none; }
+
+    /* Antworttext – nur Höhe ändert sich, Breite bleibt gleich */
+    .faq .faq-items p{
+      margin: 10px 0 0;
+      color: var(--gray-700, #25352a);
+      font-size: .95rem;
+    }
+  </style>
 </head>
-<body>
-<header class="site-header">
-  <div class="container navbar">
-    <div class="brand">Paolo Barta</div>
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="index.html" class="active" aria-current="page">Home</a>
-      <a href="ueber-mich.html">Über mich</a>
-      <a href="projekte.html">Projekte</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="formular.html">Anfrage</a>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="section">
-    <div class="container">
-      <picture>
-        <source srcset="Bilder/Bildrund.webp" type="image/webp">
-        <img class="portrait" src="Bilder/Bildrund.jpg" alt="Paolo Barta – Profilfoto"
-             width="170" height="170" decoding="async" fetchpriority="high">
-      </picture>
-      <h1 class="mt-4">Webdesign & SEO in Vorarlberg –<br>Barta Webdesign (Sulzberg)</h1>
-      <p class="lead">Moderne, schnelle Webseiten für KMU. Kostenloser Figma-Entwurf vorab; wenn es nicht passt, keine Kosten. Umsetzung mit SEO &amp; Performance.</p>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container">
-      <h2 class="mt-6">Webdesign, das gefunden wird – und schnell lädt.</h2>
-      <p>Ich konzipiere und baue Webseiten für kleine Unternehmen – klar strukturiert, schnell und suchmaschinenfreundlich. Du erhältst vorab kostenlos einen Figma-Entwurf; gefällt er nicht, zahlst du 0 €. Passt er, setze ich ihn um und stelle die Seite online.</p>
-      <ul class="bullets">
-        <li><strong>Klarer Auftritt:</strong> sauberes Design, starke Typografie, mobile first.</li>
-        <li><strong>SEO ab Tag&nbsp;1:</strong> saubere Struktur, Meta-Daten, interne Links &amp; FAQ-Snippets.</li>
-        <li><strong>Messbar schnell:</strong> Bild-Optimierung, WebP/AVIF, schlanke Fonts, grüne Web Vitals.</li>
+<body class="neon">
+  <header class="hero" id="home">
+    <nav class="navigation" aria-label="Hauptnavigation">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="ueber_mich.html">Über mich</a></li>
+        <li><a href="projekt.html">Projekt</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="anfrage.html">Anfrage</a></li>
       </ul>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container inline-links">
-      <h2 class="mt-6">Leistungen</h2>
-      <p>
-        <a href="projekte.html">Webdesign &amp; Relaunch</a> – 5–20 Seiten, passgenau für dein Geschäft. <br>
-        <a href="projekte.html">SEO-Setup</a> – Title/Description, H-Struktur, Local SEO, FAQ-Schema. <br>
-        <a href="projekte.html">Performance</a> – LCP/INP/CLS verbessern, Bilder &amp; Code schlank.
-      </p>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container">
-      <h2 class="mt-6">Ablauf</h2>
-      <ol class="stack">
-        <li><strong>Briefing (E-Mail/WhatsApp)</strong> – Ziele, Inhalte, Budget &amp; Timing.</li>
-        <li><strong>Kostenloser Figma-Entwurf</strong> – wir bearbeiten den Entwurf, bis das Konzept sitzt (Zoom).</li>
-        <li><strong>Umsetzung</strong> – sauberes HTML/CSS/JS, SEO integriert.</li>
-        <li><strong>Launch</strong> – Hosting/Domain, Tracking &amp; Übergabe.</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container faq">
-      <div class="faq-item">
-        <button class="faq-btn" type="button">Was kostet ein Projekt?</button>
-        <div class="faq-panel small">Typisch 2.000–10.000&nbsp;€, abhängig von Umfang &amp; Funktionen.</div>
+    </nav>
+    <div class="hero-indicator"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="section-label">Webdesign Studio</span>
+        <h1>Webdesign &amp; SEO</h1>
+        <p>Ich erstelle Webseiten, die leicht zu verstehen sind, schnell laden und bei Google sichtbar sind. Wir arbeiten einfach zusammen: kurze Wege, klare Schritte, saubere Technik.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-btn" type="button">Relaunch statt Neubau?</button>
-        <div class="faq-panel small">Ja – ich modernisiere bestehende Seiten und sichere Inhalte &amp; Rankings.</div>
+      <div class="hero-image">
+        <img src="Bilder/astronautindex.jpg" alt="Symbolbild moderne Website" width="900" height="700">
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section-tight">
-    <div class="container center">
-      <a class="btn primary" href="formular.html">Kostenlosen Figma-Entwurf anfordern</a>
+  <main>
+    <section class="process" id="ablauf">
+      <div class="process-layout">
+        <div class="process-visual">
+          <img src="Bilder/lochindex.jpg" alt="Vom Start bis zur fertigen Website" loading="lazy" width="900" height="700">
+        </div>
+        <div class="process-content">
+          <div class="section-heading">
+            <span class="section-label">Ablauf</span>
+            <h2>Ablauf</h2>
+          </div>
+          <div class="process-steps">
+            <ol>
+              <li><strong>Start (E-Mail/WhatsApp):</strong> Ziele, Inhalte, Budget, Zeitplan.</li>
+              <li><strong>Kostenloser Design-Entwurf:</strong> Wir stimmen alles in Ruhe ab (gern per Zoom).</li>
+              <li><strong>Umsetzung:</strong> Sauberes HTML/CSS/JS, Texte und Struktur suchmaschinenfreundlich.</li>
+              <li><strong>Launch:</strong> Domain/Hosting, einfache Messung und Übergabe.</li>
+            </ol>
+          </div>
+          <div class="process-cta">
+            <a class="primary-cta" href="anfrage.html">Kostenlosen Design-Entwurf anfordern</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" id="ueber">
+      <div class="section-heading">
+        <span class="section-label">Vorteile</span>
+        <h2>Vorteile</h2>
+        <p class="section-intro">Klare Inhalte, einfache Führung, schnelle Ladezeit. So finden Besucher schneller, was sie suchen – und melden sich bei dir.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <div class="benefit-image">
+            <img src="Bilder/raumschiffindex.jpg" alt="Klarer Auftritt" loading="lazy" width="800" height="600">
+          </div>
+          <div class="benefit-content">
+            <h3>Klarer Auftritt.</h3>
+            <p>Texte auf den Punkt, übersichtliche Abschnitte und eine klare Reihenfolge.</p>
+          </div>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-image">
+            <img src="Bilder/starman.jpg" alt="Sichtbar bei Google" loading="lazy" width="800" height="600">
+          </div>
+          <div class="benefit-content">
+            <h3>Sichtbar bei Google.</h3>
+            <p>Wichtige Begriffe, sinnvolle Überschriften und interne Links von Anfang an.</p>
+          </div>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-image">
+            <img src="Bilder/Flugzeugindex.jpg" alt="Schnelle Ladezeit" loading="lazy" width="800" height="600">
+          </div>
+          <div class="benefit-content">
+            <h3>Schnelle Ladezeit.</h3>
+            <p>Optimierte Bilder und schlanker Code sorgen für ein flüssiges Erlebnis.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======= FAQ (Fix: immer volle Breite, nur Inhalt klappt auf) ======= -->
+    <section class="faq" id="faq">
+      <div class="section-heading">
+        <span class="section-label">FAQ</span>
+        <h2>Häufige Fragen</h2>
+      </div>
+      <div class="faq-items">
+        <details>
+          <summary>Was kostet ein Projekt?</summary>
+          <p>Je nach Umfang (Seitenzahl, Funktionen) meist zwischen 2.000 und 10.000&nbsp;€.</p>
+        </details>
+        <details>
+          <summary>Geht auch eine Überarbeitung statt Neubau?</summary>
+          <p>Ja. Ich modernisiere Design, Inhalt und Technik, sichere bestehende Inhalte und verbessere die Sichtbarkeit.</p>
+        </details>
+        <details>
+          <summary>Wie läuft die Zusammenarbeit ab?</summary>
+          <p>Kurzer Start per E-Mail/WhatsApp, kostenloser Design-Entwurf, danach die Umsetzung bis zur Veröffentlichung.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-left">bartadesign</span>
+      <nav class="footer-right" aria-label="Rechtliches">
+        <a class="footer-btn" href="datenschutz.html">Datenschutz</a>
+        <a class="footer-btn" href="impressum.html">Impressum</a>
+      </nav>
     </div>
-  </section>
-
-  <section class="section-tight">
-    <div class="container center small">
-      <em>„Webdesign für KMU – moderner, schneller Internetauftritt“</em>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-    <div>Paolo Barta</div>
-    <div class="small">
-      <a href="datenschutz.html">Datenschutz</a> · <a href="impressum.html">Impressum</a> ·
-      <a href="mailto:paolo.barta2007@gmail.com">paolo.barta2007@gmail.com</a> · +43 677 623 09317
-    </div>
-  </div>
-</footer>
-
-<script defer>
-  document.querySelectorAll('.faq-btn').forEach(btn=>{
-    btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open'));
-  });
-</script>
+  </footer>
 </body>
 </html>

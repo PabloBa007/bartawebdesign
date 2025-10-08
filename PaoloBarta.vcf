@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Barta;Paolo;;;
+FN:Paolo Barta
+ORG:Barta Webdesign
+TITLE:Webdesigner; SEO-Optimierung
+TEL;TYPE=CELL,VOICE:+43 677 623 9317
+EMAIL;TYPE=INTERNET:kontakt@bartawebdesign.at
+URL:https://bartawebdesign.at
+ADR;TYPE=WORK:;;Sulzberg;Vorarlberg;6934;Austria
+END:VCARD
